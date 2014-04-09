@@ -1,4 +1,5 @@
 <?php
+	include("includes/openDbConn.php");
 	$sql1 = "SELECT * FROM tblbankaccounttransactions WHERE WithdrawAccount='".$_SESSION["BankAccountId"]."' OR DepositAccount='".$_SESSION["BankAccountId"]."' ORDER BY TransactionId desc LIMIT 5";
 	$result = mysql_query($sql1);
 	if(!$result)
@@ -54,4 +55,4 @@
 			echo "<p>No Recent Transactions</p>";
 		}
 	}
-?>
+	include("includes/closeDbConn.php"); ?>

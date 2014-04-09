@@ -1,6 +1,5 @@
 <?php
 	echo("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-	include("includes/openDbConn.php");
 ?>
 <!DOCTYPE html>
 <html> 
@@ -407,4 +406,3 @@
 
 </body>
 </html>
-<?php include("includes/closeDbConn.php"); ?>
