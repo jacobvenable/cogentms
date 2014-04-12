@@ -12,7 +12,7 @@ h1{
 	
 }
 
-.transactionHistoryElement{
+.eventElement{
 	clear:both;
 	width:96%;
 	border: 1px solid $grey;
@@ -39,7 +39,7 @@ h1{
 		}
 	}
 
-	.infoFromHolder{
+	.eventInfoContainer{
 		float:left;
 		width: 40%;
 		white-space: nowrap;
@@ -56,47 +56,61 @@ h1{
 			font-size: 16px;
 			text-align: left;
 		}
+
 	}
 
-	.amountBalanceHolder{
-		float:right;
+		button{
+			padding: 10px;
+			margin: 0px;
+			margin-top: 5px;
+			float:right;
+			clear: none !important;
+		}
+
+		.buttonHolder{
+			float:right;
+			width: 10%;
+		}
+	
+		.eventDescriptionContainer{
+		float:left;
 		width: 25%;
+		white-space: nowrap;
+		overflow: hidden;
 
 		h3{
 			font-family: $font-stack;
 			font-size: 20px;
-			text-align: right;
+			text-align: left;
 			color: $green;
 		}
 		h5{
 			font-family: $font-stack;
 			font-size: 16px;
-			text-align: right;
+			text-align: left;
 		}
-	}
-
-	.transactionInfoButton{
-		
-		float:right;
-		width: 10%;
-		height: 30px !important;
-		padding: 0px;
-		margin: 0px;
 
 	}
+	
 }
 
-.transactionHistoryElement:nth-of-type(odd){
+.eventElement:nth-of-type(odd){
 	background-color: white;
 
 }
 
-.transactionHistoryElement:nth-of-type(even){
+.eventElement:nth-of-type(even){
 background-color: $lightGrey;
 }
 
-#transactionTile{
+#eventTile{
 	width: 96% !important;
 	border: none !important;
-	padding: 2%
+	padding: 2%;
+	overflow: hidden;
 }
+
+.popup{
+	display: none;
+}
+

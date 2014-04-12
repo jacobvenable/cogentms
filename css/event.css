@@ -194,8 +194,6 @@ button:hover, input[type="submit"]:hover {
   text-transform: uppercase;
   z-index: 100000000000000000000000;
   top: 0; }
-
-  
   #headerDesktop #headerTop {
     width: 90%;
     max-width: 1366px;
@@ -350,51 +348,76 @@ h1 {
   margin-top: 25px;
   margin-left: 4%; }
 
-#transferCogentContainer {
-  width: 100%; }
-
-label {
-  font-family: "Myriad Pro", "DroidSansRegular", "Arial";
-  font-size: 20px;
-  float: left;
-  margin-bottom: 10px; }
-
-input {
-  float: left; }
-
-input[type="select"], select {
+.eventElement {
+  clear: both;
   width: 96%;
+  border: 1px solid #cccccc;
   padding: 2%;
-  margin-bottom: 25px;
-  font-size: 16px; }
+  overflow: hidden;
+  position: relative;
+  left: 200px;
+  opacity: 0; }
+  .eventElement .timestampHolder {
+    float: left;
+    width: 20%; }
+    .eventElement .timestampHolder h3 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 20px;
+      text-align: left;
+      color: #53b352; }
+    .eventElement .timestampHolder h5 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 16px;
+      text-align: left; }
+  .eventElement .eventInfoContainer {
+    float: left;
+    width: 40%;
+    white-space: nowrap;
+    overflow: hidden; }
+    .eventElement .eventInfoContainer h3 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 20px;
+      text-align: left;
+      color: #53b352; }
+    .eventElement .eventInfoContainer h5 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 16px;
+      text-align: left; }
+  .eventElement button {
+    padding: 10px;
+    margin: 0px;
+    margin-top: 5px;
+    float: right;
+    clear: none !important; }
+  .eventElement .buttonHolder {
+    float: right;
+    width: 10%; }
+  .eventElement .eventDescriptionContainer {
+    float: left;
+    width: 25%;
+    white-space: nowrap;
+    overflow: hidden; }
+    .eventElement .eventDescriptionContainer h3 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 20px;
+      text-align: left;
+      color: #53b352; }
+    .eventElement .eventDescriptionContainer h5 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 16px;
+      text-align: left; }
 
-#transferRecipientAmount {
-  width: 32%;
-  float: left; }
+.eventElement:nth-of-type(odd) {
+  background-color: white; }
 
-#memoContainer {
-  width: 64%;
-  float: right; }
+.eventElement:nth-of-type(even) {
+  background-color: #f2f2f2; }
 
-textarea {
-  width: 96%;
-  padding: 2%;
-  height: 250px; }
-
-input[type="submit"], button {
-  height: 50px !important;
-  float: right;
-  margin-top: 15px;
-  padding: 10px; }
-
-input[type="radio"] {
-  clear: left;
-  float: left; }
-
-#recipientLabel {
-  clear: left;
-  margin-top: 25px; }
-
-.infoTile {
+#eventTile {
   width: 96% !important;
-  border: none; }
+  border: none !important;
+  padding: 2%;
+  overflow: hidden; }
+
+.popup {
+  display: none; }

@@ -12,7 +12,7 @@ h1{
 	
 }
 
-.transactionHistoryElement{
+.stockEntryElement{
 	clear:both;
 	width:96%;
 	border: 1px solid $grey;
@@ -39,7 +39,7 @@ h1{
 		}
 	}
 
-	.infoFromHolder{
+	.infoRequestHolder{
 		float:left;
 		width: 40%;
 		white-space: nowrap;
@@ -56,10 +56,24 @@ h1{
 			font-size: 16px;
 			text-align: left;
 		}
+
 	}
 
-	.amountBalanceHolder{
-		float:right;
+		button{
+			padding: 10px;
+			margin: 0px;
+			margin-top: 5px;
+			float:right;
+		}
+
+		.buttonHolder{
+			float:right;
+			width: 10%;
+		}
+	
+
+	.amountStatusHolder{
+		float:left;
 		width: 25%;
 
 		h3{
@@ -75,28 +89,36 @@ h1{
 		}
 	}
 
-	.transactionInfoButton{
-		
-		float:right;
-		width: 10%;
-		height: 30px !important;
-		padding: 0px;
-		margin: 0px;
-
-	}
+	
 }
 
-.transactionHistoryElement:nth-of-type(odd){
+.stockEntryElement:nth-of-type(odd){
 	background-color: white;
 
 }
 
-.transactionHistoryElement:nth-of-type(even){
+.stockEntryElement:nth-of-type(even){
 background-color: $lightGrey;
 }
 
-#transactionTile{
+#marketTile{
 	width: 96% !important;
 	border: none !important;
 	padding: 2%
+}
+
+.popup{
+	display: none;
+}
+
+
+
+select{
+	margin-top: 20px;
+	float:right;
+	margin-right: 4%;
+	width: 15%;
+	padding: 10px;
+	font-family: $font-stack;
+	font-size: 16px;
 }
