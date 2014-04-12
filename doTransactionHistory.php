@@ -2,7 +2,7 @@
 	include("includes/openDbConn.php");
 	
 	//select from all tblbankaccounttransactions
-	$sql1="SELECT * FROM tblbankaccounttransactions WHERE WithdrawAccount='".$_SESSION["BankAccountId"]."' OR DepositAccount='".$_SESSION["BankAccountId"]."' ORDER BY TransactionId desc LIMIT 5";
+	$sql1="SELECT * FROM tblbankaccounttransactions WHERE WithdrawAccount='".$_SESSION["BankAccountId"]."' OR DepositAccount='".$_SESSION["BankAccountId"]."' ORDER BY TransactionId desc";
 	//$sql1="SELECT * FROM tblbankaccounttransactions WHERE WithdrawAccount='1177' OR DepositAccount='1177' ORDER BY TransactionId desc";
 	$result = mysql_query($sql1);
 	//echo($sql1);
@@ -45,10 +45,13 @@
 				
 				if($row2["Amount"]<0)//echo ing out credit or debit and corect coloring
 				{
-					
+					$TransactionFormat =number_format($row2["Amount"],2,'.',',');
+					$transactionTracker = "<h3>Debit: ".$TransactionFormat."</h3>";
 				}
 				else
 				{
+					$TransactionFormat =number_format($row2["Amount"],2,'.',',');
+					$transactionTracker = "<h3>Credit: ".$TransactionFormat."</h3>";
 				}
 
 				//div
@@ -62,7 +65,7 @@
 				echo "<h5>Memo: ".$row2["Notes"]."</h5>";
 				echo "</div>";
 				echo '<div class="amountBalanceHolder">';
-				echo "<h3>Credit: ".$row2["Amount"]."</h3>";
+				echo $transactionTracker;
 				echo "<h5>Balance: ".$runningBalanceFormat."</h5>";
 				echo "</div>";
 				echo "</div>";			
