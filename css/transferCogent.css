@@ -194,8 +194,6 @@ button:hover, input[type="submit"]:hover {
   text-transform: uppercase;
   z-index: 100000000000000000000000;
   top: 0; }
-
-  
   #headerDesktop #headerTop {
     width: 90%;
     max-width: 1366px;
@@ -362,7 +360,7 @@ label {
 input {
   float: left; }
 
-input[type="select"], select {
+input[type="text"], input[type="number"] {
   width: 96%;
   padding: 2%;
   margin-bottom: 25px;
@@ -381,7 +379,7 @@ textarea {
   padding: 2%;
   height: 250px; }
 
-input[type="submit"], button {
+input[type="submit"] {
   height: 50px !important;
   float: right;
   margin-top: 15px;
@@ -396,5 +394,4 @@ input[type="radio"] {
   margin-top: 25px; }
 
 .infoTile {
-  width: 96% !important;
-  border: none; }
+  border: none !important; }

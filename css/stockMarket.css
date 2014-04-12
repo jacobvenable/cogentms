@@ -194,8 +194,6 @@ button:hover, input[type="submit"]:hover {
   text-transform: uppercase;
   z-index: 100000000000000000000000;
   top: 0; }
-
-  
   #headerDesktop #headerTop {
     width: 90%;
     max-width: 1366px;
@@ -350,51 +348,81 @@ h1 {
   margin-top: 25px;
   margin-left: 4%; }
 
-#transferCogentContainer {
-  width: 100%; }
-
-label {
-  font-family: "Myriad Pro", "DroidSansRegular", "Arial";
-  font-size: 20px;
-  float: left;
-  margin-bottom: 10px; }
-
-input {
-  float: left; }
-
-input[type="select"], select {
+.stockEntryElement {
+  clear: both;
   width: 96%;
+  border: 1px solid #cccccc;
   padding: 2%;
-  margin-bottom: 25px;
-  font-size: 16px; }
+  overflow: hidden;
+  position: relative;
+  left: 200px;
+  opacity: 0; }
+  .stockEntryElement .timestampHolder {
+    float: left;
+    width: 20%; }
+    .stockEntryElement .timestampHolder h3 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 20px;
+      text-align: left;
+      color: #53b352; }
+    .stockEntryElement .timestampHolder h5 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 16px;
+      text-align: left; }
+  .stockEntryElement .infoRequestHolder {
+    float: left;
+    width: 40%;
+    white-space: nowrap;
+    overflow: hidden; }
+    .stockEntryElement .infoRequestHolder h3 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 20px;
+      text-align: left;
+      color: #53b352; }
+    .stockEntryElement .infoRequestHolder h5 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 16px;
+      text-align: left; }
+  .stockEntryElement button {
+    padding: 10px;
+    margin: 0px;
+    margin-top: 5px;
+    float: right; }
+  .stockEntryElement .buttonHolder {
+    float: right;
+    width: 10%; }
+  .stockEntryElement .amountStatusHolder {
+    float: left;
+    width: 25%; }
+    .stockEntryElement .amountStatusHolder h3 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 20px;
+      text-align: right;
+      color: #53b352; }
+    .stockEntryElement .amountStatusHolder h5 {
+      font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+      font-size: 16px;
+      text-align: right; }
 
-#transferRecipientAmount {
-  width: 32%;
-  float: left; }
+.stockEntryElement:nth-of-type(odd) {
+  background-color: white; }
 
-#memoContainer {
-  width: 64%;
-  float: right; }
+.stockEntryElement:nth-of-type(even) {
+  background-color: #f2f2f2; }
 
-textarea {
-  width: 96%;
-  padding: 2%;
-  height: 250px; }
-
-input[type="submit"], button {
-  height: 50px !important;
-  float: right;
-  margin-top: 15px;
-  padding: 10px; }
-
-input[type="radio"] {
-  clear: left;
-  float: left; }
-
-#recipientLabel {
-  clear: left;
-  margin-top: 25px; }
-
-.infoTile {
+#marketTile {
   width: 96% !important;
-  border: none; }
+  border: none !important;
+  padding: 2%; }
+
+.popup {
+  display: none; }
+
+select {
+  margin-top: 20px;
+  float: right;
+  margin-right: 4%;
+  width: 15%;
+  padding: 10px;
+  font-family: "Myriad Pro", "DroidSansRegular", "Arial";
+  font-size: 16px; }
